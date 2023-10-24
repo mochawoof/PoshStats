@@ -84,7 +84,7 @@ $verlink.Text = "New version available"
 $verlink.AutoSize = $true
 $verlink.Add_LinkClicked({
     $verlink.LinkVisited = $true
-    [System.Diagnostics.Process]::Start("https://github.com/jweled/PoshStats")
+    [System.Diagnostics.Process]::Start("https://github.com/mochawoof/PoshStats")
 })
 $verlink.ForeColor = "yellow"
 $verlink.Font = $capfnt
@@ -185,7 +185,7 @@ $pne.Controls.Add($gpucap)
 $CHECKVER = $true
 
 if ($CHECKVER -eq $true) {
-    $req = Invoke-WebRequest -Uri "https://jweled.github.io/PoshStats/cv.txt"
+    $req = Invoke-WebRequest -Uri "https://mochawoof.github.io/PoshStats/cv.txt"
     if ($req.Content -ne $null) {
         if ($req.Content -ne $VER) {
             $pne.Controls.Add($verlink)
